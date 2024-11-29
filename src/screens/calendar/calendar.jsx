@@ -5,7 +5,7 @@ import Appointment from "../../components/appointment/appointment.jsx";
 import { useEffect, useState } from "react";
 
 
-export function Calendar() {
+export default function Calendar() {
 
   const [appointments, setAppointments] = useState([]);
   

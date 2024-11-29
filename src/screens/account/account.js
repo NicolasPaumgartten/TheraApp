@@ -8,7 +8,7 @@ import api from "../../constants/api.js";
 
 
 
-export function Account(props) {
+export default function Account({ navigation }) {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -64,7 +64,7 @@ export function Account(props) {
 
         <View style={styles.footer}>
           <Text>Já tenho conta.</Text>
-          <TouchableOpacity onPress={()=> props.navigation.navigate("login")}>
+          <TouchableOpacity onPress={()=> navigation.navigate("login")}>
             <Text style={styles.footerLink}>Fazer login.</Text>
           </TouchableOpacity>
         </View>

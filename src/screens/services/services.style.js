@@ -24,7 +24,7 @@ export const styles = {
 },
 
    banner:{
-        backgroundColor: COLORS.blue,
+        backgroundColor: COLORS.brown,
         justifyContent: "center",
         alignItems: "center",
         paddingTop: 100,

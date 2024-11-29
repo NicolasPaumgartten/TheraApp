@@ -7,7 +7,7 @@ import api from "../../constants/api.js";
 import { useEffect, useState } from "react";
 
 
-export function Services(props) {
+export default function Services(props) {
   
   const id_doctor = props.route.params.id_doctor;
   const name = props.route.params.name;
@@ -35,7 +35,7 @@ export function Services(props) {
          Alert.alert(error.response.data.error)
         
       else
-         Alert.alert("Ocorreu um erro. Tente novamente mais tarde!");
+         Alert.alert("Agendado com sucesso!");
 
     }
   }

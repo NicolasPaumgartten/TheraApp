@@ -1,14 +1,14 @@
 import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import icon from "../../constants/icon.js";
-import { Home } from "../home/home.jsx";
-import { Calendar } from "../calendar/calendar.jsx";
+import Home  from "../home/home.jsx";
+import  Calendar  from "../calendar/calendar.jsx";
 import { Profile } from "../profile/profile.jsx";
 import { Image } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
-export function Main() {
+export default function Main() {
   return (
     <>
    

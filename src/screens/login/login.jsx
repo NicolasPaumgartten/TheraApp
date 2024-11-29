@@ -5,7 +5,7 @@ import Button from "../../components/button/button";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context/auth.js";
 
-export function Login(props) {
+export default function Login({ navigation }) {
   const { setUser } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,17 +19,17 @@ export function Login(props) {
     if (email === mockEmail && password === mockPassword) {
       // Simula o retorno de dados do usuário
       const mockUserData = {
+        id_user: "mock_user_idd",
         token: "mockedToken",
         user: {
           email: mockEmail,
           name: "Usuário de Teste",
         },
       };
-
       // Configura o token e os dados no contexto
       setUser(mockUserData);
       Alert.alert("Login bem-sucedido!");
-      props.navigation.navigate;("home"); // Redireciona para a tela inicial
+      navigation.navigate("home"); // Redireciona para a tela inicial
     } else {
       Alert.alert("Erro no Login", "E-mail ou senha inválidos.");
     }
@@ -65,7 +65,7 @@ export function Login(props) {
 
         <View style={styles.footer}>
           <Text>Não tenho conta.</Text>
-          <TouchableOpacity onPress={() => props.navigation.navigate("account")}>
+          <TouchableOpacity onPress={() => navigation.navigate("account")}>
             <Text style={styles.footerLink}>Criar conta agora.</Text>
           </TouchableOpacity>
         </View>
